@@ -24,7 +24,7 @@ import okhttp3.Response;
 public class DataSiswaActivity extends AppCompatActivity {
     RecyclerView rvDataSiswa;
     ArrayList<Siswa> listSiswa = new ArrayList<>();
-    final String url = "https://script.google.com/macros/s/AKfycbxoV_aAzf9QP113Q7MWhvbfJeRf-EJKFI58sMKO35tcO8Nfj2mk/exec?id=1rkAmmtkjKABzLmNmth1qkl8ZXFG8lB8kYBs-i_KqBlM&sheet=data_siswa";
+    final String url = "https://script.google.com/macros/s/AKfycbwzMeQ2doGqRO9KLyl2I7EUg4xK7_XGbNaIqqrOAwgemBa5zytV/exec?id=1ZqJKroIw0lwEVPDfmdKknOyxGIbBFgSiaML_FaE2COg&sheet=sheet1";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,16 +64,16 @@ public class DataSiswaActivity extends AppCompatActivity {
                     JSONArray jsonArray = jsonObject.getJSONArray("records");
                     for(int i=0;i<jsonArray.length();i++){
                         JSONObject data = jsonArray.getJSONObject(i);
-                        String nama = data.getString("nama");
-                        String nis = data.getString("nis");
+                        String nama_pekerjaan = data.getString("nama_pekerjaan");
+                        String nama_perusahaan = data.getString("nama_perusahaan");
                         String alamat = data.getString("alamat");
-                        String idPhoto = data.getString("id_photo");
+                        String idPhoto = data.getString("foto_perusahaan");
                         Log.d("idPhoto",idPhoto);
                         String gaji = data.getString("gaji");
                         String closed = data.getString("closed");
                         String experience = data.getString("experience");
                         String deskripsi = data.getString("deskripsi");
-                        Siswa siswa = new Siswa(nama, nis, alamat, idPhoto, gaji, closed, experience, deskripsi);
+                        Siswa siswa = new Siswa(nama_pekerjaan, nama_perusahaan, alamat, idPhoto, gaji, closed, experience, deskripsi);
                         listSiswa.add(siswa);
                     }
                 } catch (JSONException e) {

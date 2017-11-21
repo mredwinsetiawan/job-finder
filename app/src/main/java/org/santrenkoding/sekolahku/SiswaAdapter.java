@@ -40,13 +40,14 @@ public class SiswaAdapter extends RecyclerView.Adapter<SiswaAdapter.SiswaViewHol
 
     public class SiswaViewHolder extends RecyclerView.ViewHolder {
 //        ImageView imSiswa;
-        TextView tvNama, tvNis, tvAlamat;
+        TextView tvNama, tvNis, tvAlamat, tvClosed;
 
         public SiswaViewHolder(View itemView) {
             super(itemView);
 //            imSiswa = (ImageView) itemView.findViewById(R.id.im_siswa);
             tvNama = (TextView) itemView.findViewById(R.id.tv_value_data_siswa_nama);
             tvNis = (TextView) itemView.findViewById(R.id.tv_value_data_siswa_nis);
+            tvClosed = (TextView) itemView.findViewById(R.id.tv_value_data_siswa_closed);
             tvAlamat = (TextView) itemView
                     .findViewById(R.id.tv_value_data_siswa_alamat);
         }
@@ -61,6 +62,7 @@ public class SiswaAdapter extends RecyclerView.Adapter<SiswaAdapter.SiswaViewHol
         holder.tvNama.setText(listSiswa.get(position).getNama());
         holder.tvNis.setText(listSiswa.get(position).getNis());
         holder.tvAlamat.setText(listSiswa.get(position).getAlamat());
+        holder.tvClosed.setText(listSiswa.get(position).getClosed());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

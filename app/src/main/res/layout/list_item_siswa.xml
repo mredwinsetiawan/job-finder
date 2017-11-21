@@ -34,6 +34,7 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="2dp"
                         android:text="BI Consultant IT"
+                        android:textSize="20sp"
                         android:textColor="#549ef3"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -47,6 +48,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingLeft="2dp"
+                        android:textSize="16sp"
                         android:text="PT Berca Herdayaperkasa" />
 
 
@@ -65,10 +67,10 @@
                         android:id="@+id/tv_value_data_siswa_alamat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"
                         android:paddingLeft="2dp"
                         android:text="Jakarta Pusat (Jakarta Raya)"
-                        android:textSize="11sp" />
+                        android:textSize="15sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -84,16 +86,48 @@
                         android:id="@+id/tv_value_data_siswa_gaji"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"
                         android:paddingLeft="2dp"
                         android:text="Rp. 2.000.000"
                         android:textColor="#43b81a"
-                        android:textSize="11sp" />
+                        android:textSize="15sp" />
                 </LinearLayout>
 
             </LinearLayout>
+
         </LinearLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_value_data_siswa_closed"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/tv_value_data_siswa_closed"
+                android:layout_gravity="center"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/ic_action_next" />
+
+            <TextView
+                android:id="@+id/tv_value_data_siswa_closed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imageView"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="11dp"
+                android:text="26 Juli"
+                android:maxLines="1"
+                android:maxLength="10" />
+        </RelativeLayout>
     </android.support.v7.widget.CardView>
 
 </android.support.constraint.ConstraintLayout>

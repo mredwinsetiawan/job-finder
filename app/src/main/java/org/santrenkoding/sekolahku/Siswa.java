@@ -5,35 +5,35 @@ package org.santrenkoding.sekolahku;
  */
 
 public class Siswa {
-    private String nama;
-    private String nis;
+    private String nama_pekerjaan;
+    private String nama_perusahaan;
     private String alamat;
-    private String idPhoto;
+    private String foto_perusahaan;
     private String gaji;
     private String closed;
     private String experience;
     private String deskripsi;
-    public Siswa(String nama, String nis, String alamat, String idPhoto, String gaji, String closed, String experience, String deskripsi) {
-        this.nama = nama;
-        this.nis = nis;
+    public Siswa(String nama_pekerjaan, String nama_perusahaan, String alamat, String foto_perusahaan, String gaji, String closed, String experience, String deskripsi) {
+        this.nama_pekerjaan = nama_pekerjaan;
+        this.nama_perusahaan = nama_perusahaan;
         this.alamat = alamat;
-        this.idPhoto = idPhoto;
+        this.foto_perusahaan = foto_perusahaan;
         this.gaji = gaji;
         this.closed = closed;
         this.experience = experience;
         this.deskripsi = deskripsi;
     }
     public String getNama() {
-        return nama;
+        return nama_pekerjaan;
     }
     public String getNis() {
-        return nis;
+        return nama_perusahaan;
     }
     public String getAlamat() {
         return alamat;
     }
     public String getIdPhoto() {
-        return idPhoto;
+        return foto_perusahaan;
     }
     public String getGaji() {
         return gaji;

@@ -56,9 +56,10 @@ public class DetailActivity extends AppCompatActivity {
         tvDetailNama.setText(namaWisata);
         tvDetailGaji.setText(gajiWisata);
         tvDetailExperience.setText(experienceWisata);
-
+        String sl = (gambarWisata);
+        String dl = (sl.substring(33));
         Glide.with(this)
-                .load("https://drive.google.com/thumbnail?id=" + gambarWisata)
+                .load("https://drive.google.com/thumbnail?id=" + dl)
                 .placeholder(R.drawable.no_image_found)
                 .error(R.drawable.no_image_found)
                 .into(ivDetailGambar);
